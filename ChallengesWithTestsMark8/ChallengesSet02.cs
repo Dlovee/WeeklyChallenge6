@@ -8,7 +8,17 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            return char.IsLetter(c);
+            string alphabet = "abcdefghijklmnopqrstvuwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            for (int i = 0; i < alphabet.Length; i++)
+            {
+                if (alphabet[i] == c)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public bool CountOfElementsIsEven(string[] vals)
